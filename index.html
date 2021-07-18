@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .demo {
+            width: 50%;
+            display: flex;
+            margin: auto;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px 2px grey;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="show"></div>
+
+
+
+
+    <button onclick="showData()">show Data</button>
+    <button onclick="changeData()">change Data</button>
+
+
+    <script>
+        let show = document.getElementById('show')
+        var obj = {
+            name: "Pooja",
+            title: "Mern Stack Developer",
+            disc: "Hi, I am Pooja Kumari. I am from Dhanhar Dihuli"
+        }
+        function showData() {
+            show.innerHTML = ""
+            let div = document.createElement('div')
+            div.innerHTML = `<div class="demo">
+                        <h1>Raushan</h1>
+                        <h2>Full Stack Developer</h2>
+                         <h3>Hi, I am Raushan kumar. I am from Champarn Bihar</h3>
+                        </div>`
+            show.appendChild(div)
+        }
+
+        function changeData() {
+            show.innerHTML = ""
+            let div = document.createElement('div')
+            div.innerHTML = `<div class="demo">
+                        <h1>${obj.name}</h1>
+                        <h2>${obj.title}</h2>
+                         <h3>${obj.disc}</h3>
+                        </div>`
+            show.appendChild(div)
+        }
+
+
+    </script>
+</body>
+
+</html>
